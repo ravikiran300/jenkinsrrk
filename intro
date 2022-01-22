@@ -1,0 +1,8 @@
+dev commit codes if any modification or add some code they do in github
+whenever there some changes in master branch build will automatically triggered
+
+what happen if build fails it send notification to the devoloper. This is CI
+error and problems inaa containours monitoring
+
+deteching problems as early as possible
+
