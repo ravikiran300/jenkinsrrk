@@ -23,6 +23,15 @@ we are doing it small batches.
 
 =====================================================================
 
+store all the  logs to cloud by attaching a volume through cloud.
+
+fdisk -l
+mkfs.ext4 /dev/xvdf
+mkdir -p /var/lib/jenkins
+add it in fstab(/dev/xvdf /var/lib/jenkins/ ext4 defaults 0 0
+mount /var/lib/jenkins
+
+
 
 
 
