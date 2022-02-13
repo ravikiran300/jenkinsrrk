@@ -31,6 +31,11 @@ mkdir -p /var/lib/jenkins
 add it in fstab(/dev/xvdf /var/lib/jenkins/ ext4 defaults 0 0
 mount /var/lib/jenkins
 
+=================================================
+
+https://docs.cloudbees.com/docs/cloudbees-ci/latest/traditional-install-guide/high-availability(enterprise level setup)
+
+
 
 
 
