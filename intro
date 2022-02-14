@@ -38,6 +38,14 @@ https://docs.cloudbees.com/docs/cloudbees-ci/latest/traditional-install-guide/hi
 https://skalable.net/blogs/technology/jenkins_ha.html
 
 
+POLL SCM vs webhook
+
+in poll scm it is continously polling to github and resource is used process is running and using resource.
+we cronjob syntax to wait
+
+weekhook no resource. it will immedaitly build.security is less. we exposing over internet
+
+
 
 
 
