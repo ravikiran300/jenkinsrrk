@@ -5,3 +5,13 @@ sudo yum upgrade
 sudo yum install epel-release java-11-openjdk-devel
 sudo yum install jenkins
 sudo systemctl daemon-reload
+
+
+
+sudo systemctl start jenkins
+
+
+
+sudo systemctl status jenkins
+
+
