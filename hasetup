@@ -1,1 +1,14 @@
+take 3 server 2 master and one for haproxy
+
+manage-> add cred
+
+ssh username with private key
+
+ID jenkinsha(should be same in both masters
+
+username: something
+
+add privatekey from the server
+
+repeat this step in both master
 
