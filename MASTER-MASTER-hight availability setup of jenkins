@@ -14,7 +14,7 @@ repeat this step in both master
 
 create efs (nfs) and attach volumes 
 
-login install and down nfs on server(nfs-utils)
+login install and download nfs on server(nfs-utils)
 
 allow ports in ec2 security groups 2049 allows
 
@@ -59,6 +59,41 @@ remove  deafults lines
 restart haproxy
 
 haproxy public dns run it on port 80
+
+
+HA Proxy:
+######################
+
+defaults
+  log  global
+  maxconn  2000
+  mode  http
+  option  redispatch
+  option  forwardfor
+  option  http-server-close
+  retries  3
+  timeout  http-request 10s
+  timeout  queue 1m
+  timeout  connect 10s
+  timeout  client 1m
+  timeout  server 1m
+  timeout  check 10s
+
+frontend ft_jenkins
+  bind *:80
+  default_backend  bk_jenkins
+  reqadd  X-Forwarded-Proto:\ http
+
+backend bk_jenkins
+  server jenkins1 172.31.45.33:8080 check
+  server jenkins2 172.31.33.85:8080 check backup
+
+
+Crumb code: 
+################################
+#!/bin/bash
+crumb_id=$(curl -s 'http://localhost:8080/crumbIssuer/api...,":",//crumb)' -u admin:admin)
+curl -s -XPOST 'http://localhost:8080/reload' -u admin:admin -H "$crumb_id"
 
 
 
