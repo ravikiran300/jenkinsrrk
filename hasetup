@@ -46,6 +46,29 @@ vi /etc/cron.d/jenkins
 */1 **** root /bin/bash /root/jenkinsreload.sh
 
 
+============
+
+go 3rd server and install haproxy
+
+apt install haproxy
+
+vi /etc/haproxy/haproxy.cfg
+
+remove  deafults lines
+
+restart haproxy
+
+haproxy public dns run it on port 80
+
+
+
+
+
+
+
+
+
+
 
 
 
