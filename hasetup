@@ -31,6 +31,23 @@ df -h
 ls -l /var/lib/jenkins/jobs
 chown -R  jenkins:jenkins /var/lib/jenkins/jobs
 
+do the same in both server
+
+create a job freestyle helloworld and and restart the jenkins
+both project will in /var/lib/jenkins/jobs and jenkins UI
+
+INSTEAD OF RESTARTING JENKINS EVERYTIME YOU AND USE API CALLS AND USE CRON JOB
+
+we can crumb id 
+when we use crumbid go to configure global security and enable CSRF protection and enable proxy compatibility
+
+add this to cronjob 
+vi /etc/cron.d/jenkins
+*/1 **** root /bin/bash /root/jenkinsreload.sh
+
+
+
+
 
 
 
