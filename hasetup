@@ -12,3 +12,30 @@ add privatekey from the server
 
 repeat this step in both master
 
+create efs (nfs) and attach volumes 
+
+login install and down nfs on server(nfs-utils)
+
+allow ports in ec2 security groups 2049 allows
+
+efs network in aws 2049 allow it
+
+systemctl  stop jenkins
+systemctl restart nfs-server
+
+u will have efs mount point  when u attach through aws there you mention /var/lib/jenkins/jobs mount point there.
+system start jenkins
+
+
+df -h
+ls -l /var/lib/jenkins/jobs
+chown -R  jenkins:jenkins /var/lib/jenkins/jobs
+
+
+
+
+
+
+
+
+
