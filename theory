@@ -1,0 +1,5 @@
+Declarative: Declarative Pipeline encourages a Declarative Programming Model. In declarative programming, you specify what you want. You don’t care how it will get done.
+Scripted: Scripted Pipelines follow a more Imperative Programming Model. In Imperative programming, you specify what you want and how it should be done.
+
+
+https://medium.com/globant/jenkins-pipeline-declarative-vs-scripted-21f8688ee16a  
