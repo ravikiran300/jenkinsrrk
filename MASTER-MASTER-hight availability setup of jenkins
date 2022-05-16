@@ -1,3 +1,5 @@
+jenkins reverse proxy and HA setup
+
 take 3 server 2 master and one for haproxy
 
 manage-> add cred
