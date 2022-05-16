@@ -1,3 +1,10 @@
+open-source automation server that can be used to
+automate all sorts of tasks related to building, testing, and delivering or deploying
+software. Jenkins can be installed through native system packages
+version :  2.332.3
+openjdk version "11.0.12" 
+
+
 dev commit codes if any modification or add some code they do in github
 whenever there some changes in master branch build will automatically triggered
 
