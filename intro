@@ -11,6 +11,10 @@ job is collection of tasks: when/which/where
 
 Plugins management :
 each of the activity you have pulgins when you install the page jenkins will give options accordingly
+Pulgins used: 
+Bitbucket Push and Pull Request Plugin	
+Bitbucket Server Integration	
+Bitbucket Server Notifier	
 
 Node configuration:
 details of machine: what is machine jenkins to connect
@@ -22,6 +26,17 @@ system configuration:
 can i run multiple tasks on this machine and jenkisn handle load
 
 it consist master and slave which connection based on passwordless authentication. 
+
+devlopers don't have access to deploy the code to production they have accesss to URL(USER INFERENCE)
+We deploy code into there devlopment servers and update build up and running. then they are able to access the url
+
+======================================================
+
+A 'reverse proxy' allows an alternate HTTP or HTTPS provider to communicate with web browsers on behalf of Jenkins. 
+
+A pair of simple definitions would be:
+Forward Proxy: Acting on behalf of a requestor (or service consumer)
+Reverse Proxy: Acting on behalf of service/content producer.
 
 
 
@@ -67,8 +82,6 @@ https://docs.cloudbees.com/docs/cloudbees-ci/latest/traditional-install-guide/hi
 https://skalable.net/blogs/technology/jenkins_ha.html
 
 Reverse proxy:
-
-
 
 
 POLL SCM vs webhook
