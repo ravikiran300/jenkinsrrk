@@ -4,6 +4,28 @@ software. Jenkins can be installed through native system packages
 version :  2.332.3
 openjdk version "11.0.12" 
 
+architure:
+
+job configuration:
+job is collection of tasks: when/which/where
+
+Plugins management :
+each of the activity you have pulgins when you install the page jenkins will give options accordingly
+
+Node configuration:
+details of machine: what is machine jenkins to connect
+
+Tools configuration:
+maven : env configuration
+
+system configuration: 
+can i run multiple tasks on this machine and jenkisn handle load
+
+it consist master and slave which connection based on passwordless authentication. 
+
+
+
+
 
 dev commit codes if any modification or add some code they do in github
 whenever there some changes in master branch build will automatically triggered
