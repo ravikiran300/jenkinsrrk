@@ -41,9 +41,15 @@ INSTEAD OF RESTARTING JENKINS EVERYTIME YOU AND USE API CALLS AND USE CRON JOB
 we can crumb id 
 when we use crumbid go to configure global security and enable CSRF protection and enable proxy compatibility
 
+HttpGet httpGet = new HttpGet(jenkinsUrl + "crumbIssuer/api/json");
+String crumbResponse = toString(httpclient, httpGet);
+CrumbJson crumbJson = new Gson().fromJson(crumbResponse, CrumbJson.class);
+
 add this to cronjob 
 vi /etc/cron.d/jenkins
 */1 **** root /bin/bash /root/jenkinsreload.sh
+
+
 
 
 ============
@@ -94,6 +100,28 @@ Crumb code:
 #!/bin/bash
 crumb_id=$(curl -s 'http://localhost:8080/crumbIssuer/api...,":",//crumb)' -u admin:admin)
 curl -s -XPOST 'http://localhost:8080/reload' -u admin:admin -H "$crumb_id"
+
+
+#!/bin/bash
+
+ts=`date +%FT%k-%M-%S`
+fname=`ls turn/build/release/*.tar.gz|xargs basename`
+
+
+if [[ ${QA} != '' ]]
+then
+  ssh apps@app001.${QA} "if [ -f /tmp/overlord/${fname} ]; then mv /tmp/overlord/${fname} /tmp/overlord/${fname}.${ts}; fi"
+  scp turn/build/release/${fname} apps@app001.${QA}:/tmp/overlord/
+fi
+
+echo "stage on production = " ${stage_on_production}
+
+if [[ ${stage_on_production} == 'true' ]]
+then
+  ssh apps@ua020.sjc2 "if [ -f /tmp/overlord/${fname} ]; then mv /tmp/overlord/${fname} /tmp/overlord/${fname}.${ts}; fi"
+  scp turn/build/release/${fname} apps@ua020.sjc2:/tmp/overlord/
+fi
+
 
 
 
