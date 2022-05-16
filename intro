@@ -29,6 +29,7 @@ it consist master and slave which connection based on passwordless authenticatio
 
 devlopers don't have access to deploy the code to production they have accesss to URL(USER INFERENCE)
 We deploy code into there devlopment servers and update build up and running. then they are able to access the url
+download code to folder update in BOD and check db errors and fix db errors updates
 
 ======================================================
 
@@ -37,8 +38,6 @@ A 'reverse proxy' allows an alternate HTTP or HTTPS provider to communicate with
 A pair of simple definitions would be:
 Forward Proxy: Acting on behalf of a requestor (or service consumer)
 Reverse Proxy: Acting on behalf of service/content producer.
-
-
 
 
 
