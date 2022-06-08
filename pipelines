@@ -1,6 +1,15 @@
 Declarative: Declarative Pipeline encourages a Declarative Programming Model. In declarative programming, you specify what you want. You don’t care how it will get done.
 Scripted: Scripted Pipelines follow a more Imperative Programming Model. In Imperative programming, you specify what you want and how it should be done.
 
+ If you want to create automated pull request based or branch-based Jenkins Continuous Integration & Continuous Delivery pipeline, 
+ the Jenkins multibranch pipeline is a way to go.
+ 
+ As Jenkins multi-branch pipeline is fully a git-based pipeline as code
+ 
+  we can understand, Jenkins can scan Git repo for Jenkinsfile & create jobs automatically. All it needs from us is the Git Repo details.
+
+
+
 A pipeline is a collection of steps or jobs which are interlinked with one another in a sequence.
 
 The Jenkins Pipeline is written into a text file called a Jenkinsfile (You can use a different name) which can be committed to a project’s source control repository.
